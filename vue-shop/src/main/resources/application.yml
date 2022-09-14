@@ -1,0 +1,20 @@
+# 全局配置,配置数据库相关信息。
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource  # 配置数据库连接池
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/shop?useSSL=false
+    username: root
+    password: 123456
+
+  # 在application.properties中配置devtools。
+  devtools:
+    restart:
+      enabled: true   # 设置热部署生效
+      additional-paths: src/main/java # 配置重启目录
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # 按照指定格式打印日志
+server:
+  port: 8088
+
